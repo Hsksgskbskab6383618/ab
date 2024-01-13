@@ -38,6 +38,9 @@ def aby():
     return 'hi'
 
 
+  ap.run()
+
+
 
 
 y = threading.Thread(target=aby)
