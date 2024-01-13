@@ -8,16 +8,16 @@ import threading
 
 
 async def st(u,c):
-    u.message.reply_text("Hello")
+    await u.message.reply_text("Hello")
   
 
 async def ur(u,c):
   
     a = r.get('https://ulvis.net/api.php?url='+u.message.text)
     if "Error" in a.text:
-      u.message.reply_text("Enter Valid Url")
+      await u.message.reply_text("Enter Valid Url")
     else:
-      u.message.reply_text(a.text)
+      await u.message.reply_text(a.text)
 
 
 
