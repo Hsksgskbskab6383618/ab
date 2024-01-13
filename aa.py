@@ -4,11 +4,10 @@ import requests as r
 from flask import Flask
 import threading
 
-def aaa():
-  pass
 
 
-def abx():
+
+
   async def st(u,c):
     u.reply_text("Hello")
   
@@ -41,12 +40,14 @@ def aby():
 
 
 
-x = threading.Thread(target=abx)
+
 y = threading.Thread(target=aby)
 
 
-x.start()
+
 y.start()
 
-x.join()
+
 y.join()
+
+app.run_polling()
