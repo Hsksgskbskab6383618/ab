@@ -7,12 +7,11 @@ import threading
 
 
 
-
-  async def st(u,c):
+async def st(u,c):
     u.reply_text("Hello")
   
 
-  async def ur(u,c):
+async def ur(u,c):
   
     a = r.get('https://ulvis.net/api.php?url='+u.message.text)
     if "Error" in a.text:
