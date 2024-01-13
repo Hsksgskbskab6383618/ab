@@ -1,5 +1,5 @@
 from telegram import Update
-from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes,MessageHandler, filters
+from telegram.ext import Application, CommandHandler, ContextTypes,MessageHandler, filters
 import requests as r
 from flask import Flask
 import threading
@@ -21,7 +21,7 @@ async def ur(u,c):
 
 
 
-app = ApplicationBuilder().token("6361126109:AAEtzGVlSAZdqp-F2YAr1YcOx8GclBun6Vs").build()
+app = Application.builder().token("6361126109:AAEtzGVlSAZdqp-F2YAr1YcOx8GclBun6Vs").build()
 
 app.add_handler(CommandHandler("start", st))
 app.add_handler(MessageHandler(filters.TEXT,ur))
