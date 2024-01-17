@@ -60,7 +60,7 @@ async def main():
 
 
 
-ap.run()
+ap.run(host="0.0.0.0")
 
 
 
