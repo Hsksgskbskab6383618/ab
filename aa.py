@@ -21,7 +21,7 @@ async def ur(u,c):
 
 
 
-app = Application.builder().token("6361126109:AAEtzGVlSAZdqp-F2YAr1YcOx8GclBun6Vs").build()
+app = Application.builder().token("6361126109:AAGT2UpG69vQ7NVF-I9RlvF7NjFWl7LDbkI").build()
 
 app.add_handler(CommandHandler("start", st))
 app.add_handler(MessageHandler(filters.TEXT,ur))
