@@ -37,19 +37,29 @@ ap = Flask(__name__)
 def hm():
   return 'hi'
 
+
 def aby():
-  ap.run()
-
-
-
+    app.run_polling()
 
 y = threading.Thread(target=aby)
-
-
 
 y.start()
 
 
 
 
-app.run_polling()
+ap.run()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
