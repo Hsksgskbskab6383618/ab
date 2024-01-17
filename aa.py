@@ -38,13 +38,13 @@ ap = Flask(__name__)
 def hm():
   return 'hi'
 
-aaa = uvicorn.Server(uvicorn.Config(WsgiToAsgi(ap)))
+aaa = uvicorn.Server(uvicorn.Config(WsgiToAsgi(ap)),host="0.0.0.0")
 
 
 
 
 async def main():
-    await app.stop()
+    
     await app.initialize()
     await app.start()
     await app.updater.start_polling()
@@ -60,7 +60,6 @@ async def main():
 
 
 
-ap.run(host="0.0.0.0")
 
 
 
