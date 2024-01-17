@@ -38,16 +38,10 @@ def hm():
   return 'hi'
 
 
-def aby():
-    app.run_polling()
-
-y = threading.Thread(target=aby)
-
-y.start()
 
 
 
-
+app.run_polling()
 ap.run()
 
 
