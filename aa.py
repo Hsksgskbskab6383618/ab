@@ -38,7 +38,7 @@ ap = Flask(__name__)
 def hm():
   return 'hi'
 
-aaa = uvicorn.Server(uvicorn.Config(WsgiToAsgi(ap))
+aaa = uvicorn.Server(uvicorn.Config(WsgiToAsgi(ap)))
 
 
 
