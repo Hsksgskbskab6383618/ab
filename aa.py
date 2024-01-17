@@ -3,6 +3,7 @@ from telegram.ext import Application, CommandHandler, ContextTypes,MessageHandle
 import requests as r
 from flask import Flask
 import threading
+import asyncio
 
 
 
@@ -41,8 +42,13 @@ def hm():
 
 
 
-app.run_polling()
-ap.run()
+async def main():
+    await app.initialize()
+    await app.start()
+    await app.updater.start_{webhook, polling}()
+    ap.run()
+
+
 
 
 
