@@ -4,8 +4,8 @@ import requests as r
 from flask import Flask
 import threading
 import asyncio
-
-
+from asgiref.wsgi import WsgiToAsgi
+import uvicorn
 
 
 async def st(u,c):
@@ -38,6 +38,7 @@ ap = Flask(__name__)
 def hm():
   return 'hi'
 
+aaa = uvicorn.Server(uvicorn.Config(WsgiToAsgi(ap))
 
 
 
@@ -45,8 +46,10 @@ def hm():
 async def main():
     await app.initialize()
     await app.start()
-    await app.updater.start_{webhook, polling}()
-    ap.run()
+    await app.updater.start_polling()
+    await aaa.serve()
+    await app.stop()
+    
 
 
 
@@ -56,7 +59,7 @@ async def main():
 
 
 
-
+asyncio.run(main())
 
 
 
