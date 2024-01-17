@@ -25,7 +25,7 @@ app = Application.builder().token("6361126109:AAEtzGVlSAZdqp-F2YAr1YcOx8GclBun6V
 
 app.add_handler(CommandHandler("start", st))
 app.add_handler(MessageHandler(filters.TEXT,ur))
-app.run_polling()
+
 
 
 def aby():
