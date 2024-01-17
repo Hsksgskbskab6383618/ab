@@ -44,6 +44,7 @@ aaa = uvicorn.Server(uvicorn.Config(WsgiToAsgi(ap)))
 
 
 async def main():
+    await app.stop()
     await app.initialize()
     await app.start()
     await app.updater.start_polling()
