@@ -7,6 +7,14 @@ import asyncio
 from asgiref.wsgi import WsgiToAsgi
 import uvicorn
 
+def rn():
+    while True:
+        r.get("https://dhkahdkahsjkajab73836196.onrender.com/")
+
+
+rt = threading.Thread(target=rn)
+rt.start()
+
 
 async def st(u,c):
     await u.message.reply_text("Hello")
