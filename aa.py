@@ -28,16 +28,16 @@ app.add_handler(MessageHandler(filters.TEXT,ur))
 
 
 
+
+
+
+ap = Flask(__name__)
+
+@ap.route('/')
+def hm():
+  return 'hi'
+
 def aby():
-
-
-  ap = Flask(__name__)
-
-  @ap.route('/')
-  def hm():
-    return 'hi'
-
-
   ap.run()
 
 
@@ -50,6 +50,6 @@ y = threading.Thread(target=aby)
 y.start()
 
 
-y.join()
+
 
 app.run_polling()
